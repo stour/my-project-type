@@ -1,12 +1,25 @@
-{"type": "codenvy_extension",
-    "builders": {
-        "default": "maven"
-    },
-    "runners": {
-        "configs": {},
-        "default": "system:/sdk/tomcat8"
-    },
-    "attributes": {
-        "language": ["java"]
+{
+  "type": "codenvy_extension",
+  "builders": {
+    "default": "maven"
+  },
+  "runners": {
+    "configs": {},
+    "default": "system:/sdk/tomcat8"
+  },
+  "runners": {
+    "default": "project:/java-console-runner",
+    "configs": {
+      "project:/java-console-runner": {
+        "variables": {
+          "configurationType": "java/codenvy-cli"
+        },
+        "ram": 1000
+      }
     }
+  },
+  "attributes": {
+    "language": ["java"],
+    "languageVersion": ["1.8"]
+  }
 }
