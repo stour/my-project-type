@@ -4,10 +4,6 @@
     "default": "maven"
   },
   "runners": {
-    "configs": {},
-    "default": "system:/sdk/tomcat8"
-  },
-  "runners": {
     "default": "project:/java-console-runner",
     "configs": {
       "project:/java-console-runner": {
