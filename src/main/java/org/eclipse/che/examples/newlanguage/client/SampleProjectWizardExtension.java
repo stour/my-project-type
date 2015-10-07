@@ -21,7 +21,7 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
 @Singleton
-@Extension(title = "Sample Project Type Extension", version = "1.0.0")
+@Extension(title = "New Language Project Type Extension", version = "1.0.0")
 public class SampleProjectWizardExtension {
     @Inject
     public SampleProjectWizardExtension(ParserResource parserResource, IconRegistry iconRegistry) {
@@ -30,7 +30,7 @@ public class SampleProjectWizardExtension {
     }
  
     public interface ParserResource extends ClientBundle {
-        @Source("org/eclipse/che/examples/projectwizard/sampletype.svg")
+        @Source("org/eclipse/che/examples/newlanguage/newlanguage_icon.svg")
         SVGResource sampleProjectTypeCategoryIcon();
     }
 }
