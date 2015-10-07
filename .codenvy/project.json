@@ -1,0 +1,12 @@
+{"type": "codenvy_extension",
+    "builders": {
+        "default": "maven"
+    },
+    "runners": {
+        "configs": {},
+        "default": "system:/sdk/tomcat8"
+    },
+    "attributes": {
+        "language": ["java"]
+    }
+}
