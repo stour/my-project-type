@@ -10,7 +10,7 @@
  *******************************************************************************/
 package org.eclipse.che.examples.newlanguage.client.inject;
 
-import org.eclipse.che.examples.newlanguage.client.SampleProjectWizardRegistrar;
+import org.eclipse.che.examples.newlanguage.client.NewLanguageProjectWizardRegistrar;
 import org.eclipse.che.ide.api.extension.ExtensionGinModule;
 import org.eclipse.che.ide.api.project.type.wizard.ProjectWizardRegistrar;
 
@@ -18,10 +18,10 @@ import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.gwt.inject.client.multibindings.GinMultibinder;
 
 @ExtensionGinModule
-public class SampleProjectWizardGinModule extends AbstractGinModule {
+public class NewLanguageGinModule extends AbstractGinModule {
     /** {@inheritDoc} */
     @Override
     protected void configure() {
-	    GinMultibinder.newSetBinder(binder(), ProjectWizardRegistrar.class).addBinding().to(SampleProjectWizardRegistrar.class);
+	    GinMultibinder.newSetBinder(binder(), ProjectWizardRegistrar.class).addBinding().to(NewLanguageProjectWizardRegistrar.class);
     }
 }

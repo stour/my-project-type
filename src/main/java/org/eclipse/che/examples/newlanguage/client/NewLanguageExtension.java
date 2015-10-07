@@ -22,9 +22,9 @@ import com.google.inject.Singleton;
 
 @Singleton
 @Extension(title = "New Language Project Type Extension", version = "1.0.0")
-public class SampleProjectWizardExtension {
+public class NewLanguageExtension {
     @Inject
-    public SampleProjectWizardExtension(ParserResource parserResource, IconRegistry iconRegistry) {
+    public NewLanguageExtension(ParserResource parserResource, IconRegistry iconRegistry) {
         iconRegistry.registerIcon(new Icon(ProjectAttributes.NEW_LANGUAGE_PROJECT_TYPE_CATEGORY + ".samples.category.icon",
                                            parserResource.sampleProjectTypeCategoryIcon()));
     }

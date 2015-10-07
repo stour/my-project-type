@@ -11,18 +11,18 @@
 package org.eclipse.che.examples.newlanguage.server.inject;
 
 import org.eclipse.che.api.project.server.type.ProjectType;
-import org.eclipse.che.examples.newlanguage.server.SampleProjectType;
+import org.eclipse.che.examples.newlanguage.server.NewLanguageProjectType;
 import org.eclipse.che.inject.DynaModule;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.multibindings.Multibinder;
 
 @DynaModule
-public class SampleProjectTypeModule extends AbstractModule {
+public class NewLanguageModule extends AbstractModule {
     /** {@inheritDoc} */
     @Override
     protected void configure() {
         Multibinder<ProjectType> projectTypeMultibinder = Multibinder.newSetBinder(binder(), ProjectType.class);
-        projectTypeMultibinder.addBinding().to(SampleProjectType.class);
+        projectTypeMultibinder.addBinding().to(NewLanguageProjectType.class);
     }
 }

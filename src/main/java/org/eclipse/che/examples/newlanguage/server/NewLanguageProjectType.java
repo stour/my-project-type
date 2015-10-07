@@ -17,9 +17,9 @@ import org.eclipse.che.ide.Constants;
 import com.google.inject.Singleton;
 
 @Singleton
-public class SampleProjectType extends ProjectType {
+public class NewLanguageProjectType extends ProjectType {
  
-    public SampleProjectType() {
+    public NewLanguageProjectType() {
         super(ProjectAttributes.NEW_LANGUAGE_PROJECT_TYPE_ID, ProjectAttributes.NEW_LANGUAGE_PROJECT_TYPE_NAME, true, false);
         addConstantDefinition(Constants.LANGUAGE, "language", ProjectAttributes.PROGRAMMING_LANGUAGE);
     }

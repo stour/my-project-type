@@ -27,11 +27,11 @@ import com.google.inject.Provider;
  * Provides information for registering sample project type into project wizard.
  *
  */
-public class SampleProjectWizardRegistrar implements ProjectWizardRegistrar {
+public class NewLanguageProjectWizardRegistrar implements ProjectWizardRegistrar {
     private final List<Provider<? extends WizardPage<ImportProject>>> wizardPages;
 
     @Inject
-    public SampleProjectWizardRegistrar() {
+    public NewLanguageProjectWizardRegistrar() {
         wizardPages = new ArrayList<>();
     }
 
