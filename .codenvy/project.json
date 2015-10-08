@@ -8,7 +8,7 @@
     "configs": {
       "project:/java-console-runner": {
         "variables": {
-          "configurationType": "java/codenvy-cli"
+          "configurationType": "java/standalone/simple"
         },
         "ram": 1000
       }
