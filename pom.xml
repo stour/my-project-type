@@ -19,7 +19,7 @@
         <version>3.13.0-SNAPSHOT</version>
     </parent>
     <artifactId>che-plugin-new-language</artifactId>
-    <packaging>jar</packaging>
+    <packaging>che-plugin</packaging>
     <name>Che Extension Example :: New Language</name>
     <dependencies>
         <dependency>
