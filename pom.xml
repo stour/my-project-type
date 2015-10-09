@@ -19,7 +19,7 @@
         <version>3.13.0-SNAPSHOT</version>
     </parent>
     <artifactId>che-plugin-new-language</artifactId>
-    <packaging>che-plugin</packaging>
+    <packaging>jar</packaging>
     <name>Che Extension Example :: New Language</name>
     <dependencies>
         <dependency>
@@ -98,7 +98,7 @@
                             <appendAssemblyId>false</appendAssemblyId>
                             <updateOnly>false</updateOnly>
                             <descriptors>
-                                <descriptor>${project.basedir}/src/main/assembly/extension-archive.xml</descriptor>
+                                <descriptor>${project.basedir}/src/main/assembly/plugin-archive.xml</descriptor>
                             </descriptors>
                             <finalName>${project.artifactId}-${project.version}</finalName>
                         </configuration>
