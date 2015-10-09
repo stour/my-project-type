@@ -8,9 +8,8 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.che.examples.newlanguage.client;
+package tutorial.myprojecttype.client;
 
-import org.eclipse.che.examples.newlanguage.shared.ProjectAttributes;
 import org.eclipse.che.ide.api.action.ActionManager;
 import org.eclipse.che.ide.api.action.DefaultActionGroup;
 import org.eclipse.che.ide.api.constraints.Constraints;
@@ -20,29 +19,30 @@ import org.eclipse.che.ide.api.icon.IconRegistry;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import tutorial.myprojecttype.shared.ProjectAttributes;
 
 import static org.eclipse.che.ide.api.action.IdeActions.GROUP_MAIN_MENU;
 
 @Singleton
-@Extension(title = "New Language Project Type Extension", version = "1.0.0")
-public class NewLanguageExtension {
+@Extension(title = "My Project Type Extension", version = "1.0.0")
+public class MyProjectTypeExtension {
 
-    private final static String NEW_LANGUAGE_GROUP_MAIN_MENU = "New Language Menu";
+    private final static String MY_PROJECT_TYPE_GROUP_MAIN_MENU = "My Project Type Menu";
 
     @Inject
-    public NewLanguageExtension(NewLanguageResources resources, IconRegistry iconRegistry,
-                                ActionManager actionManager, NewLanguageAction action) {
-        iconRegistry.registerIcon(new Icon(ProjectAttributes.NEW_LANGUAGE_PROJECT_TYPE_CATEGORY + ".samples.category.icon",
-                                           resources.newLanguageIcon()));
+    public MyProjectTypeExtension(MyProjectTypeResources resources, IconRegistry iconRegistry,
+                                  ActionManager actionManager, MyProjectTypeAction action) {
+        iconRegistry.registerIcon(new Icon(ProjectAttributes.MY_PROJECT_TYPE_CATEGORY + ".samples.category.icon",
+                                           resources.myProjectTypeIcon()));
 
         DefaultActionGroup mainMenu = (DefaultActionGroup)actionManager.getAction(GROUP_MAIN_MENU);
 
-        DefaultActionGroup newlanguageMenu = new DefaultActionGroup(NEW_LANGUAGE_GROUP_MAIN_MENU, true, actionManager);
-        actionManager.registerAction("newlanguage", newlanguageMenu);
-        mainMenu.add(newlanguageMenu, Constraints.LAST);
+        DefaultActionGroup myProjectTypeMenu = new DefaultActionGroup(MY_PROJECT_TYPE_GROUP_MAIN_MENU, true, actionManager);
+        actionManager.registerAction("myprojecttype", myProjectTypeMenu);
+        mainMenu.add(myProjectTypeMenu, Constraints.LAST);
 
-        actionManager.registerAction("newlanguageActionID", action);
-        newlanguageMenu.add(action);
+        actionManager.registerAction("myprojecttypeActionID", action);
+        myProjectTypeMenu.add(action);
 
     }
 }

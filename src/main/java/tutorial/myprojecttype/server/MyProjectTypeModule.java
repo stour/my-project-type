@@ -8,21 +8,20 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.che.examples.newlanguage.server.inject;
+package tutorial.myprojecttype.server;
 
 import org.eclipse.che.api.project.server.type.ProjectType;
-import org.eclipse.che.examples.newlanguage.server.NewLanguageProjectType;
 import org.eclipse.che.inject.DynaModule;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.multibindings.Multibinder;
 
 @DynaModule
-public class NewLanguageModule extends AbstractModule {
+public class MyProjectTypeModule extends AbstractModule {
     /** {@inheritDoc} */
     @Override
     protected void configure() {
         Multibinder<ProjectType> projectTypeMultibinder = Multibinder.newSetBinder(binder(), ProjectType.class);
-        projectTypeMultibinder.addBinding().to(NewLanguageProjectType.class);
+        projectTypeMultibinder.addBinding().to(MyProjectType.class);
     }
 }

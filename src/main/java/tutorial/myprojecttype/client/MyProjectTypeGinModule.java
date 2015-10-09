@@ -8,9 +8,8 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.che.examples.newlanguage.client.inject;
+package tutorial.myprojecttype.client;
 
-import org.eclipse.che.examples.newlanguage.client.NewLanguageProjectWizardRegistrar;
 import org.eclipse.che.ide.api.extension.ExtensionGinModule;
 import org.eclipse.che.ide.api.project.type.wizard.ProjectWizardRegistrar;
 
@@ -18,10 +17,10 @@ import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.gwt.inject.client.multibindings.GinMultibinder;
 
 @ExtensionGinModule
-public class NewLanguageGinModule extends AbstractGinModule {
+public class MyProjectTypeGinModule extends AbstractGinModule {
     /** {@inheritDoc} */
     @Override
     protected void configure() {
-	    GinMultibinder.newSetBinder(binder(), ProjectWizardRegistrar.class).addBinding().to(NewLanguageProjectWizardRegistrar.class);
+	    GinMultibinder.newSetBinder(binder(), ProjectWizardRegistrar.class).addBinding().to(MyProjectTypeWizardRegistrar.class);
     }
 }

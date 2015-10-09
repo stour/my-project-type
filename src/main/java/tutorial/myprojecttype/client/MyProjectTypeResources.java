@@ -8,11 +8,13 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.che.examples.newlanguage.shared;
+package tutorial.myprojecttype.client;
 
-public interface ProjectAttributes {
-    String NEW_LANGUAGE_PROJECT_TYPE_ID = "newlanguage";
-    String NEW_LANGUAGE_PROJECT_TYPE_NAME = "New Language Project Type Name";
-    String NEW_LANGUAGE_PROJECT_TYPE_CATEGORY = "New Language Project Type Category";
-    String PROGRAMMING_LANGUAGE         = "java";
+import com.google.gwt.resources.client.ClientBundle;
+import org.vectomatic.dom.svg.ui.SVGResource;
+
+public interface MyProjectTypeResources extends ClientBundle {
+
+    @Source("tutorial/myprojecttype/myprojecttype_icon.svg")
+    SVGResource myProjectTypeIcon();
 }

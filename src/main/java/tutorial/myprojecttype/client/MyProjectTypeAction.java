@@ -8,7 +8,7 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.che.examples.newlanguage.client;
+package tutorial.myprojecttype.client;
 
 import org.eclipse.che.ide.api.action.Action;
 import org.eclipse.che.ide.api.action.ActionEvent;
@@ -16,18 +16,18 @@ import org.eclipse.che.ide.api.action.ActionEvent;
 import com.google.inject.Inject;
 import org.eclipse.che.ide.api.notification.NotificationManager;
 
-public class NewLanguageAction extends Action {
+public class MyProjectTypeAction extends Action {
 
     private NotificationManager notificationManager;
 
     @Inject
-    public NewLanguageAction(NewLanguageResources resources, NotificationManager notificationManager) {
-        super("New Language Action", "New Language Action Description", null, resources.newLanguageIcon());
+    public MyProjectTypeAction(MyProjectTypeResources resources, NotificationManager notificationManager) {
+        super("My Project Type Action", "My Project Type Action Description", null, resources.myProjectTypeIcon());
         this.notificationManager = notificationManager;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        notificationManager.showInfo("New Language Action");
+        notificationManager.showInfo("My Project Type Action");
     }
 }

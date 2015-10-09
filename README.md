@@ -1,1 +1,1 @@
-# che-plugin-new-language
+# che-plugin-my-project-type

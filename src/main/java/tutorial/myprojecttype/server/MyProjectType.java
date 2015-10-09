@@ -8,19 +8,19 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.che.examples.newlanguage.server;
+package tutorial.myprojecttype.server;
 
 import org.eclipse.che.api.project.server.type.ProjectType;
-import org.eclipse.che.examples.newlanguage.shared.ProjectAttributes;
 import org.eclipse.che.ide.Constants;
 
 import com.google.inject.Singleton;
+import tutorial.myprojecttype.shared.ProjectAttributes;
 
 @Singleton
-public class NewLanguageProjectType extends ProjectType {
+public class MyProjectType extends ProjectType {
  
-    public NewLanguageProjectType() {
-        super(ProjectAttributes.NEW_LANGUAGE_PROJECT_TYPE_ID, ProjectAttributes.NEW_LANGUAGE_PROJECT_TYPE_NAME, true, false);
+    public MyProjectType() {
+        super(ProjectAttributes.MY_PROJECT_TYPE_ID, ProjectAttributes.MY_PROJECT_TYPE_NAME, true, false);
         addConstantDefinition(Constants.LANGUAGE, "language", ProjectAttributes.PROGRAMMING_LANGUAGE);
     }
 }

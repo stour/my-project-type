@@ -8,7 +8,7 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.che.examples.newlanguage.client;
+package tutorial.myprojecttype.client;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,33 +16,33 @@ import java.util.List;
 import javax.validation.constraints.NotNull;
 
 import org.eclipse.che.api.project.shared.dto.ImportProject;
-import org.eclipse.che.examples.newlanguage.shared.ProjectAttributes;
 import org.eclipse.che.ide.api.project.type.wizard.ProjectWizardRegistrar;
 import org.eclipse.che.ide.api.wizard.WizardPage;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import tutorial.myprojecttype.shared.ProjectAttributes;
 
 /**
  * Provides information for registering sample project type into project wizard.
  *
  */
-public class NewLanguageProjectWizardRegistrar implements ProjectWizardRegistrar {
+public class MyProjectTypeWizardRegistrar implements ProjectWizardRegistrar {
     private final List<Provider<? extends WizardPage<ImportProject>>> wizardPages;
 
     @Inject
-    public NewLanguageProjectWizardRegistrar() {
+    public MyProjectTypeWizardRegistrar() {
         wizardPages = new ArrayList<>();
     }
 
     @NotNull
     public String getProjectTypeId() {
-        return ProjectAttributes.NEW_LANGUAGE_PROJECT_TYPE_ID;
+        return ProjectAttributes.MY_PROJECT_TYPE_ID;
     }
 
     @NotNull
     public String getCategory() {
-        return ProjectAttributes.NEW_LANGUAGE_PROJECT_TYPE_CATEGORY;
+        return ProjectAttributes.MY_PROJECT_TYPE_CATEGORY;
     }
 
     @NotNull
