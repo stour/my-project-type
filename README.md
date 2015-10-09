@@ -1,1 +1,1 @@
-# che-plugin-my-project-type
+# My Project Type
