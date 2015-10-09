@@ -8,13 +8,11 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package tutorial.myprojecttype.client;
+package tutorial;
 
-import com.google.gwt.resources.client.ClientBundle;
-import org.vectomatic.dom.svg.ui.SVGResource;
-
-public interface MyProjectTypeResources extends ClientBundle {
-
-    @Source("tutorial/myprojecttype/myprojecttype_icon.svg")
-    SVGResource myProjectTypeIcon();
+public interface ProjectAttributes {
+    String MY_PROJECT_TYPE_ID = "myprojecttype";
+    String MY_PROJECT_TYPE_NAME = "My Project Type Name";
+    String MY_PROJECT_TYPE_CATEGORY = "My Project Type Category";
+    String PROGRAMMING_LANGUAGE         = "java";
 }

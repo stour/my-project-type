@@ -8,19 +8,19 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package tutorial.myprojecttype.server;
+package tutorial;
 
-import org.eclipse.che.api.project.server.type.ProjectType;
-import org.eclipse.che.ide.Constants;
+import org.eclipse.che.ide.api.extension.ExtensionGinModule;
+import org.eclipse.che.ide.api.project.type.wizard.ProjectWizardRegistrar;
 
-import com.google.inject.Singleton;
-import tutorial.myprojecttype.shared.ProjectAttributes;
+import com.google.gwt.inject.client.AbstractGinModule;
+import com.google.gwt.inject.client.multibindings.GinMultibinder;
 
-@Singleton
-public class MyProjectType extends ProjectType {
- 
-    public MyProjectType() {
-        super(ProjectAttributes.MY_PROJECT_TYPE_ID, ProjectAttributes.MY_PROJECT_TYPE_NAME, true, false);
-        addConstantDefinition(Constants.LANGUAGE, "language", ProjectAttributes.PROGRAMMING_LANGUAGE);
+@ExtensionGinModule
+public class MyGinModule extends AbstractGinModule {
+    /** {@inheritDoc} */
+    @Override
+    protected void configure() {
+	    GinMultibinder.newSetBinder(binder(), ProjectWizardRegistrar.class).addBinding().to(MyWizard.class);
     }
 }

@@ -8,7 +8,7 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package tutorial.myprojecttype.client;
+package tutorial;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,17 +21,16 @@ import org.eclipse.che.ide.api.wizard.WizardPage;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-import tutorial.myprojecttype.shared.ProjectAttributes;
 
 /**
  * Provides information for registering sample project type into project wizard.
  *
  */
-public class MyProjectTypeWizardRegistrar implements ProjectWizardRegistrar {
+public class MyWizard implements ProjectWizardRegistrar {
     private final List<Provider<? extends WizardPage<ImportProject>>> wizardPages;
 
     @Inject
-    public MyProjectTypeWizardRegistrar() {
+    public MyWizard() {
         wizardPages = new ArrayList<>();
     }
 

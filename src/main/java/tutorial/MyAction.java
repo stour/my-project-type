@@ -8,7 +8,7 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package tutorial.myprojecttype.client;
+package tutorial;
 
 import org.eclipse.che.ide.api.action.Action;
 import org.eclipse.che.ide.api.action.ActionEvent;
@@ -16,12 +16,12 @@ import org.eclipse.che.ide.api.action.ActionEvent;
 import com.google.inject.Inject;
 import org.eclipse.che.ide.api.notification.NotificationManager;
 
-public class MyProjectTypeAction extends Action {
+public class MyAction extends Action {
 
     private NotificationManager notificationManager;
 
     @Inject
-    public MyProjectTypeAction(MyProjectTypeResources resources, NotificationManager notificationManager) {
+    public MyAction(MyResources resources, NotificationManager notificationManager) {
         super("My Project Type Action", "My Project Type Action Description", null, resources.myProjectTypeIcon());
         this.notificationManager = notificationManager;
     }

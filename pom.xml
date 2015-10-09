@@ -16,8 +16,9 @@
     <parent>
         <artifactId>maven-depmgt-pom</artifactId>
         <groupId>org.eclipse.che.depmgt</groupId>
-        <version>3.13.0-SNAPSHOT</version>
+        <version>3.13.1-SNAPSHOT</version>
     </parent>
+    <groupId>tutorial</groupId>
     <artifactId>my-project-type</artifactId>
     <packaging>jar</packaging>
     <name>Tutorial :: My Project Type</name>

@@ -8,7 +8,7 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package tutorial.myprojecttype.client;
+package tutorial;
 
 import org.eclipse.che.ide.api.action.ActionManager;
 import org.eclipse.che.ide.api.action.DefaultActionGroup;
@@ -19,19 +19,18 @@ import org.eclipse.che.ide.api.icon.IconRegistry;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import tutorial.myprojecttype.shared.ProjectAttributes;
 
 import static org.eclipse.che.ide.api.action.IdeActions.GROUP_MAIN_MENU;
 
 @Singleton
 @Extension(title = "My Project Type Extension", version = "1.0.0")
-public class MyProjectTypeExtension {
+public class MyExtension {
 
     private final static String MY_PROJECT_TYPE_GROUP_MAIN_MENU = "My Project Type Menu";
 
     @Inject
-    public MyProjectTypeExtension(MyProjectTypeResources resources, IconRegistry iconRegistry,
-                                  ActionManager actionManager, MyProjectTypeAction action) {
+    public MyExtension(MyResources resources, IconRegistry iconRegistry,
+                       ActionManager actionManager, MyAction action) {
         iconRegistry.registerIcon(new Icon(ProjectAttributes.MY_PROJECT_TYPE_CATEGORY + ".samples.category.icon",
                                            resources.myProjectTypeIcon()));
 
