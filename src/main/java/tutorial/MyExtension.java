@@ -26,13 +26,18 @@ import static org.eclipse.che.ide.api.action.IdeActions.GROUP_MAIN_MENU;
 @Extension(title = "My Project Type Extension", version = "1.0.0")
 public class MyExtension {
 
+    public final static String MY_PROJECT_TYPE_ID = "myprojecttype";
+    public final static String MY_PROJECT_TYPE_NAME = "My Project Type Name";
+    public final static String MY_PROJECT_TYPE_CATEGORY = "My Project Type Category";
+    public final static String PROGRAMMING_LANGUAGE = "java";
+
     private final static String MY_PROJECT_TYPE_GROUP_MAIN_MENU = "My Project Type Menu";
 
     @Inject
     public MyExtension(MyResources resources, IconRegistry iconRegistry,
                        ActionManager actionManager, MyAction action) {
-        iconRegistry.registerIcon(new Icon(ProjectAttributes.MY_PROJECT_TYPE_CATEGORY + ".samples.category.icon",
-                                           resources.myProjectTypeIcon()));
+        iconRegistry.registerIcon(new Icon(MY_PROJECT_TYPE_CATEGORY + ".samples.category.icon",
+                resources.myProjectTypeIcon()));
 
         DefaultActionGroup mainMenu = (DefaultActionGroup)actionManager.getAction(GROUP_MAIN_MENU);
 

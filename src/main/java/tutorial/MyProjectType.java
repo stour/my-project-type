@@ -14,13 +14,17 @@ import org.eclipse.che.api.project.server.type.ProjectType;
 import org.eclipse.che.ide.Constants;
 
 import com.google.inject.Singleton;
-import tutorial.ProjectAttributes;
 
 @Singleton
 public class MyProjectType extends ProjectType {
- 
+
+    public final static String MY_PROJECT_TYPE_ID = "myprojecttype";
+    public final static String MY_PROJECT_TYPE_NAME = "My Project Type Name";
+    public final static String MY_PROJECT_TYPE_CATEGORY = "My Project Type Category";
+    public final static String PROGRAMMING_LANGUAGE = "java";
+
     public MyProjectType() {
-        super(ProjectAttributes.MY_PROJECT_TYPE_ID, ProjectAttributes.MY_PROJECT_TYPE_NAME, true, false);
-        addConstantDefinition(Constants.LANGUAGE, "language", ProjectAttributes.PROGRAMMING_LANGUAGE);
+        super(MY_PROJECT_TYPE_ID, MY_PROJECT_TYPE_NAME, true, false);
+        addConstantDefinition(Constants.LANGUAGE, "language", PROGRAMMING_LANGUAGE);
     }
 }

@@ -22,6 +22,9 @@ import org.eclipse.che.ide.api.wizard.WizardPage;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 
+import static tutorial.MyExtension.MY_PROJECT_TYPE_CATEGORY;
+import static tutorial.MyExtension.MY_PROJECT_TYPE_ID;
+
 /**
  * Provides information for registering sample project type into project wizard.
  *
@@ -36,12 +39,12 @@ public class MyWizard implements ProjectWizardRegistrar {
 
     @NotNull
     public String getProjectTypeId() {
-        return ProjectAttributes.MY_PROJECT_TYPE_ID;
+        return MY_PROJECT_TYPE_ID;
     }
 
     @NotNull
     public String getCategory() {
-        return ProjectAttributes.MY_PROJECT_TYPE_CATEGORY;
+        return MY_PROJECT_TYPE_CATEGORY;
     }
 
     @NotNull
