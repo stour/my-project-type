@@ -27,7 +27,6 @@ import static tutorial.MyExtension.MY_PROJECT_TYPE_ID;
 
 /**
  * Provides information for registering sample project type into project wizard.
- *
  */
 public class MyWizard implements ProjectWizardRegistrar {
     private final List<Provider<? extends WizardPage<ImportProject>>> wizardPages;

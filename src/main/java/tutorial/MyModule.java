@@ -18,7 +18,9 @@ import com.google.inject.multibindings.Multibinder;
 
 @DynaModule
 public class MyModule extends AbstractModule {
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     protected void configure() {
         Multibinder<ProjectType> projectTypeMultibinder = Multibinder.newSetBinder(binder(), ProjectType.class);

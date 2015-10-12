@@ -39,7 +39,7 @@ public class MyExtension {
         iconRegistry.registerIcon(new Icon(MY_PROJECT_TYPE_CATEGORY + ".samples.category.icon",
                 resources.myProjectTypeIcon()));
 
-        DefaultActionGroup mainMenu = (DefaultActionGroup)actionManager.getAction(GROUP_MAIN_MENU);
+        DefaultActionGroup mainMenu = (DefaultActionGroup) actionManager.getAction(GROUP_MAIN_MENU);
 
         DefaultActionGroup myProjectTypeMenu = new DefaultActionGroup(MY_PROJECT_TYPE_GROUP_MAIN_MENU, true, actionManager);
         actionManager.registerAction("myprojecttype", myProjectTypeMenu);

@@ -18,9 +18,11 @@ import com.google.gwt.inject.client.multibindings.GinMultibinder;
 
 @ExtensionGinModule
 public class MyGinModule extends AbstractGinModule {
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     protected void configure() {
-	    GinMultibinder.newSetBinder(binder(), ProjectWizardRegistrar.class).addBinding().to(MyWizard.class);
+        GinMultibinder.newSetBinder(binder(), ProjectWizardRegistrar.class).addBinding().to(MyWizard.class);
     }
 }
